@@ -1,0 +1,19 @@
+[versions]
+# https://kotlinlang.org/docs/home.html
+kotlin = "2.4.20"
+# https://github.com/Kotlin/kotlinx.coroutines/releases
+coroutines = "1.11.0"
+
+# https://github.com/vanniktech/gradle-maven-publish-plugin/releases/latest
+vanniktech-maven-publish = "0.37.0"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-maven-publish" }
+
+[libraries]
+# Kotlin
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
